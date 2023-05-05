@@ -9,13 +9,13 @@ const PostSchema = new Schema({
     type: String,
     min: 2,
     max: 50,
-    require: true,
+    required: true,
   },
   lastName: {
     type: String,
     min: 2,
     max: 50,
-    require: true,
+    required: true,
   },
   location: String,
   description: {
