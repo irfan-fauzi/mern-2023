@@ -2,43 +2,35 @@
 import mongoose from 'mongoose';
 
 const { Schema } = mongoose;
-const PostSchema = new Schema({
-  id: String,
-  userId: String,
-  firstName: {
-    type: String,
-    min: 2,
-    max: 50,
-    required: true,
+const PostSchema = new Schema(
+  {
+    userId: {
+      type: String,
+      require: true,
+    },
+    firstName: {
+      type: String,
+      required: true,
+    },
+    lastName: {
+      type: String,
+      required: true,
+    },
+    location: String,
+    description: String,
+    userPicturePath: String,
+    picturePath: String,
+    likes: {
+      type: Map,
+      of: Boolean,
+    },
+    comments: {
+      type: Array,
+      default: [],
+    },
   },
-  lastName: {
-    type: String,
-    min: 2,
-    max: 50,
-    required: true,
-  },
-  location: String,
-  description: {
-    type: String,
-    max: 500,
-  },
-  userPicturePath: {
-    type: String,
-    default: '',
-  },
-  picturePath: {
-    type: String,
-    default: '',
-  },
-  likes: {
-    type: Object,
-    default: {},
-  },
-  comments: {
-    type: Array,
-    default: [],
-  },
-});
+  { timestamps: true },
+);
 
 const Post = mongoose.model('Post', PostSchema);
 export default Post;
