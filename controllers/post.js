@@ -1,8 +1,9 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable import/extensions */
 /* eslint-disable import/prefer-default-export */
 
-import Post from '../models/Post';
-import User from '../models/User';
+import Post from '../models/Post.js';
+import User from '../models/User.js';
 
 export const createPost = async (req, res) => {
   try {

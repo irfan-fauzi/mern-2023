@@ -1,10 +1,11 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable import/extensions */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable import/prefer-default-export */
 
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import User from '../models/User';
+import User from '../models/User.js';
 
 // REGISTER
 export const register = async (req, res) => {

@@ -2,8 +2,8 @@
 /* eslint-disable import/extensions */
 
 import express from 'express';
-import { getUser, getUserFriend, addRemoveFriend } from '../controllers/user';
-import { verifyToken } from '../middleware/auth';
+import { getUser, getUserFriend, addRemoveFriend } from '../controllers/user.js';
+import { verifyToken } from '../middleware/auth.js';
 
 const router = express.Router();
 

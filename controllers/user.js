@@ -1,9 +1,10 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable import/extensions */
 /* eslint-disable no-shadow */
 /* eslint-disable no-self-compare */
 /* eslint-disable import/prefer-default-export */
 
-import User from '../models/User';
+import User from '../models/User.js';
 
 // READ
 export const getUser = async (req, res) => {
